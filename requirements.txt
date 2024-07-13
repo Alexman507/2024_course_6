@@ -1,5 +1,5 @@
 django~=4.2.13
-psycopg2-binary
+psycopg2-binary~=2.9.9
 pillow~=10.3.0
 pytils~=0.4.1
 python-decouple~=3.8
@@ -13,3 +13,6 @@ psycopg2~=2.9.9
 colorama~=0.4.6
 requests~=2.31.0
 python-dotenv~=1.0.1
+django-apscheduler~=0.6.2
+redis~=5.0.7
+django-stubs~=5.0.2
