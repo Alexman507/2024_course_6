@@ -29,7 +29,7 @@ class Message(models.Model):
     Модель для хранения информации о сообщении для рассылки
     """
 
-    title = models.CharField(max_length=255, verbose_name="Тема")
+    title = models.CharField(max_length=255, verbose_name="Заголовок")
     message = models.TextField(verbose_name="Сообщение")
     owner = models.ForeignKey(User, verbose_name='Владелец', on_delete=models.SET_NULL, **NULLABLE)
 

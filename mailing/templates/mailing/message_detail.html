@@ -1,0 +1,36 @@
+{% extends 'mailing/base.html'%}
+{% load static %}
+{% load my_tags %}
+{% block content %}
+
+<div class="row text-right">
+    <div class="col-6">
+        <div class="card mb-3 box-shadow">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">Информация о сообщении</h4>
+            </div>
+
+            <div class="card-body">
+                <p class="card-text">
+
+                    <br>
+                    <b>Заголовок: </b>{{message.title}}
+                    <br> <br>
+                    <b>Сообщение: </b>{{message.message}}
+                    <br> <br>
+                    <b>Рассылка: </b>{{message.mailing}}
+                    <br> <br>
+
+                </p>
+                <div class="btn-group">
+
+                    <a class="btn btn-primary" href="{% url 'mailing:messages_list' %}" role="button"> Назад
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
