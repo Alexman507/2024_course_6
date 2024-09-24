@@ -1,0 +1,52 @@
+{% extends 'mailing/base.html'%}
+{% load static %}
+{% load my_tags %}
+{% block content %}
+
+<div class="row text-right">
+    <div class="col-6">
+        <div class="card mb-3 box-shadow">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">Информация</h4>
+            </div>
+
+            <div class="card-body">
+                <p class="card-text">
+
+                    <br>
+                    <b>Наименование: </b>{{mailing.name}}
+                    <br> <br>
+                    <b>Описание: </b>{{mailing.description}}
+                    <br> <br>
+                    <b>Периодичность: </b>{{mailing.mailing.periodicity}}
+                    <br> <br>
+                    <b>Дата начала: </b>{{mailing.start_date}}
+                    <br><br>
+                    <b>Следующая отправка: </b>{{mailing.start_date}}
+                    <br><br>
+                    <b>Дата окончания: </b>{{mailing.start_date}}
+                    <br><br>
+                    <b>Владелец: </b>{{mailing.start_date}}
+                    <br><br>
+                    <b>Сообщение: </b>{{mailing.start_date}}
+                    <br><br>
+                    <b>Клиенты: </b>
+
+                    {% for client in mailing.clients.all %}
+                    <b> {{ client.email }}</b>
+                    {% endfor %}
+                    <br><br>
+
+                </p>
+                <div class="btn-group">
+
+                    <a class="btn btn-primary" href="{% url 'mailing:mailings_list' %}" role="button"> Назад
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
